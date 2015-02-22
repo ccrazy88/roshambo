@@ -8,11 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		99B16FE31A99800700F9704B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B16FE21A99800700F9704B /* AppDelegate.swift */; };
-		99B16FE51A99800700F9704B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B16FE41A99800700F9704B /* ViewController.swift */; };
+		99B16FE51A99800700F9704B /* ChoiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B16FE41A99800700F9704B /* ChoiceViewController.swift */; };
 		99B16FE81A99800700F9704B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99B16FE61A99800700F9704B /* Main.storyboard */; };
 		99B16FEA1A99800700F9704B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 99B16FE91A99800700F9704B /* Images.xcassets */; };
 		99B16FED1A99800700F9704B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99B16FEB1A99800700F9704B /* LaunchScreen.xib */; };
 		99B16FF91A99800700F9704B /* RoshamboTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B16FF81A99800700F9704B /* RoshamboTests.swift */; };
+		99B170031A99846D00F9704B /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B170021A99846D00F9704B /* ResultsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,13 +30,14 @@
 		99B16FDD1A99800700F9704B /* Roshambo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Roshambo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		99B16FE11A99800700F9704B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		99B16FE21A99800700F9704B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		99B16FE41A99800700F9704B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		99B16FE41A99800700F9704B /* ChoiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoiceViewController.swift; sourceTree = "<group>"; };
 		99B16FE71A99800700F9704B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		99B16FE91A99800700F9704B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		99B16FEC1A99800700F9704B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		99B16FF21A99800700F9704B /* RoshamboTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RoshamboTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		99B16FF71A99800700F9704B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		99B16FF81A99800700F9704B /* RoshamboTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoshamboTests.swift; sourceTree = "<group>"; };
+		99B170021A99846D00F9704B /* ResultsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,8 +80,9 @@
 			isa = PBXGroup;
 			children = (
 				99B16FE21A99800700F9704B /* AppDelegate.swift */,
-				99B16FE41A99800700F9704B /* ViewController.swift */,
 				99B16FE61A99800700F9704B /* Main.storyboard */,
+				99B16FE41A99800700F9704B /* ChoiceViewController.swift */,
+				99B170021A99846D00F9704B /* ResultsViewController.swift */,
 				99B16FE91A99800700F9704B /* Images.xcassets */,
 				99B16FEB1A99800700F9704B /* LaunchScreen.xib */,
 				99B16FE01A99800700F9704B /* Supporting Files */,
@@ -212,8 +215,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				99B16FE51A99800700F9704B /* ViewController.swift in Sources */,
+				99B16FE51A99800700F9704B /* ChoiceViewController.swift in Sources */,
 				99B16FE31A99800700F9704B /* AppDelegate.swift in Sources */,
+				99B170031A99846D00F9704B /* ResultsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,6 +345,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Roshambo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -351,6 +356,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Roshambo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -369,6 +375,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = RoshamboTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Roshambo.app/Roshambo";
@@ -384,6 +391,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = RoshamboTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Roshambo.app/Roshambo";
@@ -409,6 +417,7 @@
 				99B16FFE1A99800700F9704B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		99B16FFF1A99800700F9704B /* Build configuration list for PBXNativeTarget "RoshamboTests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +426,7 @@
 				99B170011A99800700F9704B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

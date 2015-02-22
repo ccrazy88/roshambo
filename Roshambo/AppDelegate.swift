@@ -2,9 +2,6 @@
 //  AppDelegate.swift
 //  Roshambo
 //
-//  Created by Chrisna Aing on 2/21/15.
-//  Copyright (c) 2015 Chrisna Aing. All rights reserved.
-//
 
 import UIKit
 
