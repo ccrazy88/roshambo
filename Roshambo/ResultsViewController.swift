@@ -16,7 +16,7 @@ class ResultsViewController: UIViewController {
     // MARK: Data
 
     var userChoice: Shape!
-    var matchup: Matchup!
+    private var matchup: Matchup!
 
     // MARK: -
     // MARK: View Lifecycle
