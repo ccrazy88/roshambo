@@ -15,16 +15,13 @@ class ResultsViewController: UIViewController {
 
     // MARK: Data
 
-    var userChoice: Shape!
-    private var matchup: Matchup!
+    var matchup: Matchup?
 
     // MARK: -
     // MARK: View Lifecycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        matchup = Matchup(player: userChoice)
         displayResult()
     }
 
@@ -32,23 +29,25 @@ class ResultsViewController: UIViewController {
     // MARK: UI
 
     private func displayResult() {
-        let imageName: String
-        let text: String
+        if let matchup = matchup {
+            let imageName: String
+            let text: String
 
-        switch matchup.result() {
-        case .Tie:
-            text = "\(matchup.description): it's a tie!"
-            imageName = "Tie"
-        case .Win:
-            text = "You win with \(matchup.description)!"
-            imageName = "\(matchup.player.description)-\(matchup.opponent.description)"
-        case .Loss:
-            text = "You lose with \(matchup.description) :(."
-            imageName = "\(matchup.opponent.description)-\(matchup.player.description)"
+            switch matchup.result() {
+            case .Tie:
+                text = "\(matchup): it's a tie!"
+                imageName = "\(matchup.result())"
+            case .Win:
+                text = "You win with \(matchup)!"
+                imageName = "\(matchup.player)-\(matchup.opponent)"
+            case .Loss:
+                text = "You lose with \(matchup) :(."
+                imageName = "\(matchup.opponent)-\(matchup.player)"
+            }
+
+            resultImage.image = UIImage(named: imageName.lowercaseString)
+            resultLabel.text = text
         }
-
-        resultImage.image = UIImage(named: imageName.lowercaseString)
-        resultLabel.text = text
     }
 
     @IBAction private func playAgain() {

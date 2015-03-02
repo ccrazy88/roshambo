@@ -5,7 +5,7 @@
 
 import Foundation
 
-enum Shape: Int {
+enum Shape: Int, Printable {
 
     case Rock, Paper, Scissors
 
@@ -41,13 +41,21 @@ enum Shape: Int {
 
 }
 
-enum Result {
+enum Result: Printable {
 
     case Tie, Win, Loss
 
+    var description: String {
+        switch self {
+        case .Tie: return "Tie"
+        case .Win: return "Win"
+        case .Loss: return "Loss"
+        }
+    }
+
 }
 
-struct Matchup {
+struct Matchup: Printable {
 
     // MARK: -
     // MARK: Properties
