@@ -5,18 +5,6 @@
 
 import UIKit
 
-enum Shape: String {
-    case Rock = "Rock"
-    case Paper = "Paper"
-    case Scissors = "Scissors"
-
-    static func randomShape() -> Shape {
-        let shapes = ["Rock", "Paper", "Scissors"]
-        let randomChoice = Int(arc4random_uniform(3))
-        return Shape(rawValue: shapes[randomChoice])!
-    }
-}
-
 class ResultsViewController: UIViewController {
 
     // MARK: -
@@ -25,15 +13,18 @@ class ResultsViewController: UIViewController {
     @IBOutlet private weak var resultImage: UIImageView!
     @IBOutlet private weak var resultLabel: UILabel!
 
-    // MARK: Shapes
+    // MARK: Data
 
     var userChoice: Shape!
-    private let opponentChoice: Shape = Shape.randomShape()
+    var matchup: Matchup!
 
     // MARK: -
     // MARK: View Lifecycle
 
-    override func viewWillAppear(animated: Bool) {
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        matchup = Matchup(player: userChoice)
         displayResult()
     }
 
@@ -41,22 +32,19 @@ class ResultsViewController: UIViewController {
     // MARK: UI
 
     private func displayResult() {
-        // Ideally, most of this would be handled by a model.
         let imageName: String
         let text: String
-        let matchup = "\(userChoice.rawValue) vs. \(opponentChoice.rawValue)"
 
-        // Why is an exclamation point necessary? :(
-        switch (userChoice!, opponentChoice) {
-        case let (user, opponent) where user == opponent:
-            text = "\(matchup): it's a tie!"
+        switch matchup.result() {
+        case .Tie:
+            text = "\(matchup.description): it's a tie!"
             imageName = "Tie"
-        case (.Rock, .Scissors), (.Paper, .Rock), (.Scissors, .Paper):
-            text = "You win with \(matchup)!"
-            imageName = "\(userChoice.rawValue)-\(opponentChoice.rawValue)"
-        default:
-            text = "You lose with \(matchup) :(."
-            imageName = "\(opponentChoice.rawValue)-\(userChoice.rawValue)"
+        case .Win:
+            text = "You win with \(matchup.description)!"
+            imageName = "\(matchup.player.description)-\(matchup.opponent.description)"
+        case .Loss:
+            text = "You lose with \(matchup.description) :(."
+            imageName = "\(matchup.opponent.description)-\(matchup.player.description)"
         }
 
         resultImage.image = UIImage(named: imageName.lowercaseString)

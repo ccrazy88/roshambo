@@ -14,6 +14,7 @@
 		99B16FED1A99800700F9704B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99B16FEB1A99800700F9704B /* LaunchScreen.xib */; };
 		99B16FF91A99800700F9704B /* RoshamboTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B16FF81A99800700F9704B /* RoshamboTests.swift */; };
 		99B170031A99846D00F9704B /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B170021A99846D00F9704B /* ResultsViewController.swift */; };
+		99BCB9C41AA4617D00276094 /* Matchup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99BCB9C31AA4617D00276094 /* Matchup.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		99B16FF71A99800700F9704B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		99B16FF81A99800700F9704B /* RoshamboTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoshamboTests.swift; sourceTree = "<group>"; };
 		99B170021A99846D00F9704B /* ResultsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
+		99BCB9C31AA4617D00276094 /* Matchup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Matchup.swift; path = Model/Matchup.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 			isa = PBXGroup;
 			children = (
 				99B16FE21A99800700F9704B /* AppDelegate.swift */,
+				99BCB9C51AA4618400276094 /* Model */,
 				99B16FE61A99800700F9704B /* Main.storyboard */,
 				99B16FE41A99800700F9704B /* ChoiceViewController.swift */,
 				99B170021A99846D00F9704B /* ResultsViewController.swift */,
@@ -113,6 +116,14 @@
 				99B16FF71A99800700F9704B /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		99BCB9C51AA4618400276094 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				99BCB9C31AA4617D00276094 /* Matchup.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -217,6 +228,7 @@
 			files = (
 				99B16FE51A99800700F9704B /* ChoiceViewController.swift in Sources */,
 				99B16FE31A99800700F9704B /* AppDelegate.swift in Sources */,
+				99BCB9C41AA4617D00276094 /* Matchup.swift in Sources */,
 				99B170031A99846D00F9704B /* ResultsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
