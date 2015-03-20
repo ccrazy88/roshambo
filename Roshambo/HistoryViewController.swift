@@ -36,11 +36,4 @@ class HistoryViewController: UIViewController, UITableViewDataSource {
         return cell
     }
 
-    // MARK: -
-    // MARK: UI
-
-    @IBAction private func goBack() {
-        dismissViewControllerAnimated(true, completion: nil)
-    }
-
 }

@@ -18,7 +18,7 @@ class ChoiceViewController: UIViewController {
     @IBAction private func playRock(sender: UIButton) {
         let vc = self.storyboard?.instantiateViewControllerWithIdentifier("ResultsViewController") as! ResultsViewController
         vc.matchup = setupMatchup(getUserShape(sender))
-        presentViewController(vc, animated: true, completion: nil)
+        self.navigationController?.pushViewController(vc, animated: true)
     }
 
     // MARK: Segue with Code Approach
