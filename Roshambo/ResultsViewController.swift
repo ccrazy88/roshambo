@@ -10,11 +10,14 @@ class ResultsViewController: UIViewController {
     // MARK: -
     // MARK: Outlets
 
+    // 15) Implicitly unwrapped optional
     @IBOutlet private weak var resultImage: UIImageView!
+    // 16) Implicitly unwrapped optional
     @IBOutlet private weak var resultLabel: UILabel!
 
     // MARK: Data
 
+    // 17) Optional
     var matchup: Matchup?
 
     // MARK: -
@@ -29,6 +32,7 @@ class ResultsViewController: UIViewController {
     // MARK: UI
 
     private func displayResult() {
+        // 18) if / let
         if let matchup = matchup {
             let imageName: String
             let text: String
@@ -51,6 +55,7 @@ class ResultsViewController: UIViewController {
     }
 
     @IBAction private func playAgain() {
+        // 19) Optional chaining
         self.navigationController?.popToRootViewControllerAnimated(true)
     }
 
