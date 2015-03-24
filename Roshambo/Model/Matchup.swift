@@ -26,6 +26,7 @@ enum Shape: Int, Printable {
     static private func allShapes() -> [Shape] {
         var shapes = [Shape]()
         var n = 0
+        // 20) if / let
         while let shape = Shape(rawValue: n) {
             shapes.append(shape)
             ++n

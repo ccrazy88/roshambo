@@ -83,14 +83,12 @@
 		99B16FDF1A99800700F9704B /* Roshambo */ = {
 			isa = PBXGroup;
 			children = (
-				99B16FE21A99800700F9704B /* AppDelegate.swift */,
-				99BCB9C51AA4618400276094 /* Model */,
-				99B16FE61A99800700F9704B /* Main.storyboard */,
 				99B16FE41A99800700F9704B /* ChoiceViewController.swift */,
 				991C875A1ABB7D3300213215 /* HistoryViewController.swift */,
 				99B170021A99846D00F9704B /* ResultsViewController.swift */,
+				99B16FE61A99800700F9704B /* Main.storyboard */,
 				99B16FE91A99800700F9704B /* Images.xcassets */,
-				99B16FEB1A99800700F9704B /* LaunchScreen.xib */,
+				99BCB9C51AA4618400276094 /* Model */,
 				99B16FE01A99800700F9704B /* Supporting Files */,
 			);
 			path = Roshambo;
@@ -99,6 +97,8 @@
 		99B16FE01A99800700F9704B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				99B16FE21A99800700F9704B /* AppDelegate.swift */,
+				99B16FEB1A99800700F9704B /* LaunchScreen.xib */,
 				99B16FE11A99800700F9704B /* Info.plist */,
 			);
 			name = "Supporting Files";
