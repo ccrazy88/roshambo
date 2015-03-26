@@ -26,7 +26,11 @@ enum Shape: Int, Printable {
     static private func allShapes() -> [Shape] {
         var shapes = [Shape]()
         var n = 0
-        // 20) if / let
+        // 23) if / let
+        // The purpose of this is to keep going until we run out of shapes in the enum. This is a
+        // slightly clever way to ensure that this function works even if you modify the cases. (The
+        // description is the way that it is to purposely raise a compiler error if the cases are
+        // modified.)
         while let shape = Shape(rawValue: n) {
             shapes.append(shape)
             ++n
